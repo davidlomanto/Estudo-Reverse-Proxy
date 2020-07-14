@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ingress-host  
+spec:
+ rules:
+  - host: echo-test.estudo.com.br
+    http:
+      paths:
+      - backend:
+          serviceName: echo-test 
+          servicePort: 5678
+  - host: echo-test2.estudo.com.br
+    http:
+      paths:
+      - backend:
+          serviceName: echo-test2 
+          servicePort: 5678  
